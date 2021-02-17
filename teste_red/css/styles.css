@@ -1,0 +1,367 @@
+/* --------------- BASIC SETUP ----------------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    border: none;
+    text-decoration: none;
+}
+
+:root {
+    --color-white: rgb(247, 247, 247);
+    --color-blue: #406ba0;
+    --color-green: rgb(46, 170, 46);
+    --color-dark-gray: rgb(43, 43, 43);
+    --color-light-gray: rgb(168, 168, 168);
+    --first-color-gradient-banner: rgba(42, 88, 156, 0.712);
+    --second-color-gradient-banner: rgba(42, 69, 156, 0.548);
+    --color-gradient-blue: rgba(30, 61, 107, 0.863);
+    --color-gradient-green: rgba(46, 170, 46, 0.548);
+}
+
+body {
+    font-family: "Nunito", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* --------------- REUSABLE COMPONENTS ----------------- */
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* --------------- HEADINGS ---------------- */
+
+h1,
+h2 {
+    font-weight: normal;
+    line-height: 0.9;
+    font-size: 3rem;
+}
+
+span {
+    font-weight: bold;
+}
+
+
+/* --------------- HEADER ---------------- */
+
+header {
+    background-image: linear-gradient( to bottom, var(--first-color-gradient-banner), var(--second-color-gradient-banner)), url(../img/banner-min.jpg);
+    background-attachment: fixed;
+    background-position: 50% 30%;
+    width: 100%;
+    height: 100vh;
+}
+
+.header-contact {
+    background-color: var(--color-green);
+    width: 40%;
+    height: 40px;
+    justify-content: flex-end;
+    color: var(--color-dark-gray);
+}
+
+.header-contact p {
+    margin: 0 10px;
+    color: var(--color-white);
+}
+
+.header-social-media {
+    background-color: var(--color-blue);
+    width: 60%;
+}
+
+.logo img {
+    width: 150px;
+    margin-right: 30px;
+}
+
+nav {
+    width: 100%;
+    height: 70px;
+    border-bottom: 1px solid var(--color-light-gray);
+}
+
+nav a {
+    text-transform: uppercase;
+    text-decoration: none;
+    margin: 0 20px;
+    font-size: 16px;
+    color: var(--color-white);
+}
+
+nav a:hover {
+    color: var(--color-green);
+}
+
+.hero-text-box {
+    color: var(--color-white);
+    margin: 20% 0 0 20%;
+}
+
+
+/* --------------- ICONS ----------------- */
+
+.icon-big {
+    font-size: 60px;
+    color: var(--color-green);
+    font-weight: lighter;
+}
+
+.icon-small {
+    font-size: 18px;
+    margin: 0 6px;
+    font-weight: lighter;
+}
+
+.icon-phone {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.social-icons {
+    color: var(--color-white);
+}
+
+.social-icons li:hover {
+    color: var(--color-green);
+}
+
+
+/* --------------- FEATURES ---------------- */
+
+.section-features {
+    height: 600px;
+}
+
+.features-title {
+    height: 150px;
+    margin: 100px 20% 70px;
+    color: var(--color-blue);
+}
+
+.feature {
+    margin: 30px;
+    text-align: center;
+    width: 250px;
+    height: 250px;
+}
+
+.feature h3 {
+    font-size: 3.5rem;
+    letter-spacing: 0.2cm;
+    color: var(--color-dark-gray);
+}
+
+.feature p {
+    color: var(--color-blue);
+}
+
+
+/* --------------- PARALAX ---------------- */
+
+.paralax {
+    width: 100%;
+    height: 300px;
+    background-image: linear-gradient( to right, var(--color-gradient-green), var(--color-gradient-blue)), url(../img/shutterstock_581412451.jpg);
+    background-size: 110%;
+    background-position: 30% 15%;
+    display: flex;
+    justify-content: flex-end;
+    color: var(--color-white);
+}
+
+.paralax-text {
+    text-align: right;
+    margin-right: 20%;
+    width: 300px;
+    margin-top: 50px;
+}
+
+.paralax p {
+    margin: 10px 0;
+}
+
+.paralax button {
+    text-transform: uppercase;
+    color: var(--color-white);
+    width: 150px;
+    height: 40px;
+    border-radius: 50px;
+    background-image: linear-gradient( to right, var(--color-blue), var(--color-green));
+}
+
+
+/* --------------- CHOICES ----------------- */
+
+.choices {
+    width: 100%;
+    height: 650px;
+}
+
+.choices h2 {
+    margin: 60px 0 60px 20%;
+    color: var(--color-blue);
+}
+
+.choices-imgs {
+    width: 100%;
+    justify-content: space-between;
+}
+
+.choice-img {
+    width: 250px;
+    height: 300px;
+    background-image: linear-gradient( to right, rgba(85, 85, 85, 0.719), rgba(128, 128, 128, 0.466)), url(../img/shutterstock_581412451.jpg);
+    background-size: 180%;
+    background-position: 30% 5%;
+    display: flex;
+    align-items: flex-end;
+}
+
+.choice-img:nth-child(3) {
+    background-image: linear-gradient( to right, rgba(53, 143, 165, 0.747), rgba(53, 165, 141, 0.822)), url(../img/shutterstock_581412451.jpg);
+    display: flex;
+    align-items: flex-start;
+}
+
+.choice-img p {
+    color: var(--color-white);
+    margin: 0 0 20px 20px;
+    font-weight: bold;
+}
+
+.choice-img h3 {
+    color: var(--color-white);
+    margin: 20px;
+}
+
+.choice-img:nth-child(3) p {
+    font-weight: normal;
+    width: 90%;
+    font-size: 16px;
+}
+
+.choice-img:nth-child(3) p.choice-footer {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+
+/* --------------- PROJECTS ----------------- */
+
+.projects-title {
+    width: 100%;
+    height: 200px;
+    background-image: linear-gradient( to right, var(--color-blue), var(--color-green));
+    color: var(--color-white);
+    text-align: right;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.projects-title h2 {
+    margin-right: 20%;
+}
+
+.projects {
+    height: auto;
+}
+
+.project-img-1,
+.project-img-3,
+.project-img-4 {
+    width: 20%;
+    height: 300px;
+    background-size: 200%;
+}
+
+.project-img-2 {
+    width: 40%;
+}
+
+.project-img-1 {
+    background-image: linear-gradient( to right, rgba(26, 26, 26, 0.671), rgba(51, 51, 51, 0.582)), url(../img/cats.jpg);
+    background-position-x: 50%;
+}
+
+.project-img-2 {
+    background-image: linear-gradient( to right, rgba(26, 26, 26, 0.295), rgba(51, 51, 51, 0.356)), url(../img/banner-min.jpg);
+    background-size: 100%;
+}
+
+.project-img-3 {
+    background-color: var(--color-blue);
+    color: var(--color-white);
+    text-transform: uppercase;
+    font-size: 2rem;
+}
+
+.project-img-4 {
+    background-image: linear-gradient( to right, rgba(26, 26, 26, 0.671), rgba(51, 51, 51, 0.582)), url(../img/cats.jpg);
+    background-position-x: 50%;
+}
+
+.project-img-5,
+.project-img-6 {
+    height: 300px;
+    background-size: 100%;
+}
+
+.project-img-5 {
+    background-image: linear-gradient( to right, rgba(26, 26, 26, 0.671), rgba(51, 51, 51, 0.582)), url(../img/pool.jpg);
+    width: 60%;
+    background-position-y: 50%;
+}
+
+.project-img-6 {
+    background-image: linear-gradient( to right, rgba(26, 26, 26, 0.671), rgba(51, 51, 51, 0.582)), url(../img/cats.jpg);
+    width: 40%;
+}
+
+
+/* --------------- FOOTER ----------------- */
+
+footer {
+    height: 300px;
+    background-color: var(--color-blue);
+    color: var(--color-white);
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+}
+
+footer li {
+    margin-bottom: 10px;
+}
+
+footer a {
+    color: var(--color-white);
+    text-transform: uppercase;
+}
+
+footer div {
+    margin: 20px;
+}
